@@ -1,0 +1,18 @@
+services:
+  tmdb:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: always
+    ports:
+      - 3000:3000
+
+  nginx:
+    image: nginx:latest
+    container_name: nginx-webserver
+    restart: always
+    ports:
+    - 80:80
+    volumes:
+    - ./nginx/:/etc/nginx/conf.d/:ro
+    - ./log/:/var/log/nginx
