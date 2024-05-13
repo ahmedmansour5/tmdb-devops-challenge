@@ -1,5 +1,6 @@
 services:
   tmdb:
+    container_name: tmdb-app 
     build:
       context: .
       dockerfile: Dockerfile
