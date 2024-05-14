@@ -7,7 +7,7 @@ This creates resources in GCP to satisfy the request for **Task 2**
 ### Clone the Repository
 
     git clone https://github.com/ahmedmansour5/tmdb-devops-challenge.git
-    cd tmdb-devops-challenge
+    cd tmdb-devops-challenge/tmdb-IaC/gcp/tmdb-infra/
     ls
 
 ### Authenticate with GCP 
