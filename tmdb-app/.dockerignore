@@ -1,0 +1,11 @@
+#git ignores
+.git
+.gitignore
+
+#node ignores
+node_modules
+
+#os ignores
+.vscode
+.DS_Store
+Thumbs.db

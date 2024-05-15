@@ -2,17 +2,18 @@
 
 ## To run from CMD
 
-In project folder run
+In this folder run
 
-npm start
+  npm install
+  npm start
 
 ## Build Docker
 
-In project folder run
+In this folder run
 
-docker build -t {image name} . 
+  docker build -t {image name} . 
 
-docker run -p 3000 {image name}  
+  docker run -p 3000 {image name}  
 
 ## To use Docker Compose
 
