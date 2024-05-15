@@ -7,6 +7,9 @@ variable "region" {
 variable "zone" {
 }
 
+variable "zone2" {
+}
+
 variable "tmdb_ssh_user" {
   default = "tmdb"
 }
