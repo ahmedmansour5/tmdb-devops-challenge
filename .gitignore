@@ -1,0 +1,9 @@
+#remove log files
+*.log
+
+#remove MacOS files
+.DS_Store
+
+#remove secrets
+*secret*
+*.key
