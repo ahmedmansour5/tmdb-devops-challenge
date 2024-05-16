@@ -1,0 +1,29 @@
+services:
+  tmdb:
+    container_name: tmdb-app 
+    healthcheck:
+      test: ["CMD", "wget", "--spider", "--server-response", "http://127.0.0.1:3000"]
+      interval: 1m
+      timeout: 10s
+      retries: 5
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: always
+    ports:
+      - 3000:3000
+
+  nginx:
+    image: nginx:latest
+    container_name: nginx-webserver
+    healthcheck:
+      test: ["CMD", "service", "nginx", "status"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+    restart: always
+    ports:
+    - 80:80
+    volumes:
+    - ./nginx/:/etc/nginx/conf.d/:ro
+    - ./log/:/var/log/nginx
