@@ -26,4 +26,7 @@ services:
     - 80:80
     volumes:
     - ./nginx/:/etc/nginx/conf.d/:ro
-    - ./log/:/var/log/nginx:rw
+    - nginx-logs:/var/log/nginx:rw
+
+volumes:
+  nginx-logs:
